@@ -18,11 +18,11 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@storybook/nextjs": "^7.5.3",
+    "@storybook/nextjs": "7.5.3",
     "@types/node": "20.8.10",
     "@types/react": "18.2.36",
     "@types/react-dom": "18.2.14",
-    "cross-env": "^7.0.3",
+    "cross-env": "7.0.3",
     "eslint": "8.53.0",
     "eslint-config-next": "14.0.1",
     "storybook": "7.5.3",
