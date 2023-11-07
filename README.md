@@ -5,6 +5,8 @@
 
 ## Whats up with Next14 and Storybook v7?
 
+[Update: actually the only addon causing package hoisting is `@storybook/addon-essentials`]
+
 When trying to install extra addons like `@storybook/addon-essentials`, `@storybook/addon-links`, `@storybook/addon-mdx-gfm` and build storybook (`yarn build:storybook`) throws the following error:
 
 ```
