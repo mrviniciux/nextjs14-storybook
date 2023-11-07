@@ -1,7 +1,7 @@
 # nextjs14-storybook
 
-Node v20.9.0
-Storybook v7.5.3
+* Node v20.9.0
+* Storybook v7.5.3
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
