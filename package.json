@@ -6,19 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:storybook": "storybook build",
+    "storybook": "cross-env NODE_ENV=test storybook dev -p 6006"
   },
   "dependencies": {
+    "next": "14.0.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "next": "14.0.1"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "typescript": "5.2.2",
     "@types/node": "20.8.10",
     "@types/react": "18.2.36",
     "@types/react-dom": "18.2.14",
+    "cross-env": "^7.0.3",
     "eslint": "8.53.0",
-    "eslint-config-next": "14.0.1"
+    "eslint-config-next": "14.0.1",
+    "storybook": "7.5.3",
+    "typescript": "5.2.2"
   }
 }
