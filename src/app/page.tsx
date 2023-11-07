@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import ButtonXPTO from '@/components/ButtonXPTO'
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
+          <ButtonXPTO />
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
         <div>
