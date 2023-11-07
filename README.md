@@ -3,6 +3,45 @@
 * Node v20.9.0
 * Storybook v7.5.3
 
+## Whats up with Next14 and Storybook v7?
+
+When trying to install extra addons like `@storybook/addon-essentials`, `@storybook/addon-links`, `@storybook/addon-mdx-gfm` and build storybook (`yarn build:storybook`) throws the following error:
+
+```
+SPDTI-148455:nextjs14-storybook 99765$ yarn build:storybook
+yarn run v1.22.19
+$ storybook build
+🔴 Error: It looks like you are having a known issue with package hoisting.
+Please check the following issue for details and solutions: https://github.com/storybookjs/storybook/issues/22431#issuecomment-1630086092
+
+
+/Users/99765/Software/nextjs14-storybook/node_modules/cli-table3/src/utils.js:1
+const stringWidth = require('string-width');
+                    ^
+
+Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/99765/Software/nextjs14-storybook/node_modules/string-width/index.js from /Users/99765/Software/nextjs14-storybook/node_modules/cli-table3/src/utils.js not supported.
+Instead change the require of index.js in /Users/99765/Software/nextjs14-storybook/node_modules/cli-table3/src/utils.js to a dynamic import() which is available in all CommonJS modules.
+    at Object.<anonymous> (/Users/99765/Software/nextjs14-storybook/node_modules/cli-table3/src/utils.js:1:21)
+    at Object.<anonymous> (/Users/99765/Software/nextjs14-storybook/node_modules/cli-table3/src/table.js:2:15)
+    at Object.<anonymous> (/Users/99765/Software/nextjs14-storybook/node_modules/cli-table3/index.js:1:18)
+    at Object.<anonymous> (/Users/99765/Software/nextjs14-storybook/node_modules/@storybook/core-server/dist/index.js:104:2802)
+    at Object.<anonymous> (/Users/99765/Software/nextjs14-storybook/node_modules/@storybook/cli/dist/generate.js:11:4494)
+    at Object.<anonymous> (/Users/99765/Software/nextjs14-storybook/node_modules/@storybook/cli/bin/index.js:26:1)
+    at Object.<anonymous> (/Users/99765/Software/nextjs14-storybook/node_modules/storybook/index.js:3:1) {
+  code: 'ERR_REQUIRE_ESM'
+}
+
+Node.js v20.9.0
+error Command failed with exit code 7.
+```
+
+And even if remove those addons from `package.json` and execute `yarn` again the problem persists.
+
+## Solution
+
+Removing those addons from package.json, excluding yarn.lock and executing `yarn` again solves the problem. 🍁
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
